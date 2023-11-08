@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1</title>
+</head>
+<body>
+    <button onclick="emiteAlerta()">Click aqui</button>
+
+    <h1
+    onmouseleave="emiteError()" 
+    onmouseover="emiteWarn()" 
+    onclick="alteraH1()"
+    >Emite error</h1>
+       
+    <h2 class="texto" 
+    onclick="alteraH2()"
+    >Texto qualquer.</h2>
+
+    <h3 id="texto2" 
+    onclick="alteraH3()"
+    >Texto qualquer 2.</h2>
+
+    <p>
+        <input type="number" onkeyup="calculaTabuada(this.value)">
+    </p>
+    <div id="tabuada">     
+    </div>
+
+   <script type="text/javascript">
+        const nome = "Juliano";
+        const sobrenome = "Bianchi";
+        console.log(nome+" "+sobrenome);
+
+        function emiteAlerta () 
+        {
+            alert('Você clicou em um botão');
+            //console.log('A função emiteAlerta foi adicionada');
+            // console.error('Mensagens de erro');
+            // console.warn('Um erro que não é grave');
+            // console.info('mensagem de informação');
+            // console.table([555,222,555]);
+        }
+
+        const emiteError = function()
+        {
+            console.error("Isso é uma função em variável!");
+        }
+        const emiteWarn = function()
+        {
+            console.warn("O Mouse está sobre...");
+        }
+
+        //Pegado elementos via JS
+        const alteraH1 = function()
+        {
+            const h1 = document.querySelector('h1'); //busca pela tag
+            h1.innerText = "Valor alterado pela Tag";
+
+
+        }   
+        const alteraH2 = function()
+        {
+            const h2 = document.querySelector('.texto'); //busca pela classe
+            h2.innerText = "Texto alterado pela Classe";
+
+        }   
+        const alteraH3 = function()
+        {
+            const h3 = document.querySelector('#texto2'); //busca pelo ID
+            //h3.innerText = "Texto alterado pela ID";
+            h3.innerHTML = "Texto alterado <br> pela ID";
+        }   
+
+        const calculaTabuada = function(valor)
+        {
+            const tabuada = document.querySelector('#tabuada');
+            tabuada.innerText = "";
+            for(i = 0; i<=10; i++)
+            {
+                tabuada.innerHTML += `<p> ${valor} x ${i} = ${i*valor} </p>`;
+            }
+
+        }
+
+    </script>
+</body>
+</html>
