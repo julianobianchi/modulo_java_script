@@ -32,3 +32,18 @@ input:hover {
     background-color: aliceblue;
     animation-name: none;
 }
+
+#attempts {
+    font-size: 18px;
+}
+
+#message {
+    font-size: 18px;
+    color: green;
+}
+
+#game-over {
+    font-size: 24px;
+    color: red;
+    font-weight: bold;
+}
