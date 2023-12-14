@@ -1,0 +1,10 @@
+/**
+*Jogo de Força
+
+* Vetor com várias palavras
+* Remover a última palavra do vetor
+* A palavra removida falar a quantidade de letras
+* Em um input digitar uma letra e ver se ela existe na palavra
+* Se não existe conta como erro. Com três erros game over a palavra volta para o início do vetor.
+*  Acertando todas as letras, conta como 100 pontos e volta para o ínicio do vetor
+*/
