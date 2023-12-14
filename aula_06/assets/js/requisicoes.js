@@ -68,8 +68,7 @@ const renderPokemons = function () {
         }        
         btn_next.onclick =  function(){
             consultaEndpoint('pokemon', dados.next);
-        }        
-        
+        }                
     }
 }
 
